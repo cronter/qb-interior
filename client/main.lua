@@ -368,7 +368,10 @@ end
 local function CreateFurniMotelStandard(spawn)
 	local objects = {}
     local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": -0.43, "y": -2.51, "z": 1.0, "h": 271.29}')
+	POIOffsets.exit = json.decode('{"x": -0.47, "y": -2.39, "z": 0.5, "h": 271.29}')
+	POIOffsets.clothes = json.decode('{"x": 1.30, "y": 2.56, "z":0.5, "h":2.263}')
+	POIOffsets.stash = json.decode('{"x": 1.82, "y": -2.67, "z": 0.5, "h":2.263}')
+	POIOffsets.logout = json.decode('{"x": -2.44, "y": 2.16, "z": 0.5, "h":2.263}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
         Wait(10)
@@ -381,6 +384,12 @@ local function CreateFurniMotelStandard(spawn)
     FreezeEntityPosition(house, true)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+	if IsNew then
+		SetTimeout(750, function()
+			TriggerEvent('qb-clothes:client:CreateFirstCharacter')
+			IsNew = false
+		end)
+	end
     return { objects, POIOffsets }
 end
 

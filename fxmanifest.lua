@@ -2,77 +2,98 @@ fx_version 'cerulean'
 game 'gta5'
 
 description 'QB-Interior'
-version '1.1.0'
-
-this_is_a_map 'yes'
+version '1.0.0'
 
 client_scripts {
 	'client/main.lua',
-	--'client/optional.lua'
+	'client/optional.lua'
 }
 
 files {
-	'starter_shells_k4mb1.ytyp',
-	-- 'stream/ClassicHouseShells/shellpropsv19.ytyp',
-	-- 'stream/DeluxeHousingShells/shellpropsv2.ytyp',
-	-- 'stream/FurnishedHousingShells/shellpropsv11.ytyp',
-	-- 'stream/FurnishedMotelsShells/shellpropsv18.ytyp',
-	-- 'stream/FurnishedStashhousesShells/shellpropsv15.ytyp',
-	-- 'stream/GarageShells/shellpropsv8.ytyp',
-	-- 'stream/HighendHousingShells/shellpropsv9.ytyp',
-	-- 'stream/HighendLabShells/kshellsdrug.ytyp',
-	-- 'stream/LabShells/shellpropsv7.ytyp',
-	-- 'stream/MediumHousingShells/shellpropsv10.ytyp',
-	-- 'stream/ModernHotelsShells/shellpropsv14.ytyp',
-	-- 'stream/ModernHousingShells/shellpropsv12.ytyp',
-	-- 'stream/OfficeShells/shellpropsv3.ytyp',
-	-- 'stream/StashhousesShells/shellpropsv16.ytyp',
-	-- 'stream/StoreShells/shellpropsv4.ytyp',
-	-- 'stream/WarehouseShells/shellpropsv5.ytyp',
-	-- 'stream/AllShellsBundle/allshellsbundle.ytyp',
-	-- 'stream/AllFurnishedShellsBundle/allfurnishedshellsbundle.ytyp',
-	-- 'stream/AllEmptyShellsBundle/allemptyshellsbundle.ytyp',
+	'stream/DefaultHousingV2/stream/default_housing_k4mb1.ytyp',
+	'stream/K4MB1startshells/stream/starter_shells_k4mb1.ytyp',
+	'stream/MainHousingPackMerged/stream/mainhousingshells.ytyp',
 }
 
--- Default (included)
-data_file 'DLC_ITYP_REQUEST' 'starter_shells_k4mb1.ytyp'
--- Classic
--- data_file 'DLC_ITYP_REQUEST' 'stream/ClassicHouseShells/shellpropsv19.ytyp'
--- -- Deluxe
--- data_file 'DLC_ITYP_REQUEST' 'stream/DeluxeHousingShells/shellpropsv2.ytyp'
--- -- Furnished Housing
--- data_file 'DLC_ITYP_REQUEST' 'stream/FurnishedHousingShells/shellpropsv11.ytyp'
--- -- Furnished Motels
--- data_file 'DLC_ITYP_REQUEST' 'stream/FurnishedMotelsShells/shellpropsv18.ytyp'
--- -- Furnished Stash
--- data_file 'DLC_ITYP_REQUEST' 'stream/FurnishedStashhousesShells/shellpropsv15.ytyp'
--- -- Garage
--- data_file 'DLC_ITYP_REQUEST' 'stream/GarageShells/shellpropsv8.ytyp'
--- -- High End
--- data_file 'DLC_ITYP_REQUEST' 'stream/HighendHousingShells/shellpropsv9.ytyp'
--- -- High End Labs
--- data_file 'DLC_ITYP_REQUEST' 'stream/HighendLabShells/kshellsdrug.ytyp'
--- -- Labs
--- data_file 'DLC_ITYP_REQUEST' 'stream/LabShells/shellpropsv7.ytyp'
--- -- Medium Housing
--- data_file 'DLC_ITYP_REQUEST' 'stream/MediumHousingShells/shellpropsv10.ytyp'
--- -- Modern Hotels
--- data_file 'DLC_ITYP_REQUEST' 'stream/ModernHotelsShells/shellpropsv14.ytyp'
--- -- Modern Housing
--- data_file 'DLC_ITYP_REQUEST' 'stream/ModernHousingShells/shellpropsv12.ytyp'
--- -- Office
--- data_file 'DLC_ITYP_REQUEST' 'stream/OfficeShells/shellpropsv3.ytyp'
--- -- Stash
--- data_file 'DLC_ITYP_REQUEST' 'stream/StashhousesShells/shellpropsv16.ytyp'
--- -- Store
--- data_file 'DLC_ITYP_REQUEST' 'stream/StoreShells/shellpropsv4.ytyp'
--- -- Warehouse
--- data_file 'DLC_ITYP_REQUEST' 'stream/WarehouseShells/shellpropsv5.ytyp'
--- -- All Shells Bundle
--- data_file 'DLC_ITYP_REQUEST' 'stream/AllShellsBundle/allshellsbundle.ytyp'
--- -- All Furnished Bundle
--- data_file 'DLC_ITYP_REQUEST' 'stream/AllFurnishedShellsBundle/allfurnishedshellsbundle.ytyp'
--- -- All Empty Bundle
--- data_file 'DLC_ITYP_REQUEST' 'stream/AllEmptyShellsBundle/allemptyshellsbundle.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/DefaultHousingV2/stream/default_housing_k4mb1.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/K4MB1startshells/stream/starter_shells_k4mb1.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/MainHousingPackMerged/stream/mainhousingshells.ytyp'
 
-lua54 'yes'
+exports {
+	'CreateStore1',
+	'CreateOffice1',
+	'CreateMichael',
+	'CreateFurniMid',
+	'CreateGarageMed',
+	'DespawnInterior',
+	'CreateContainer',
+	'CreateWarehouse1',
+	'CreateRanchShell',
+	'CreateTier1House',
+	'CreateLesterShell',
+	'CreateHouseRobbery',
+	'CreateTrevorsShell',
+	'CreateCaravanShell',
+	'CreateFranklinAunt',
+	'CreateApartmentShell',
+	'CreateFurniMotelModern',
+	'CreateApartmentFurnished',
+	'CreateFurniMotelStandard',
+
+	'CreateMedium2',
+	'CreateMedium3',
+	'CreateBanham',
+	'CreateWestons',
+	'CreateWestons2',
+	'CreateClassicHouse',
+	'CreateClassicHouse2',
+	'CreateClassicHouse3',
+	'CreateHighend1',
+	'CreateHighend2',
+	'CreateHighend3',
+	'CreateHighend',
+	'CreateHighendV2',
+	'CreateStashHouse',
+	'CreateStashHouse2',
+	'CreateGarageLow',
+	'CreateGarageHigh',
+	'CreateOffice2',
+	'CreateOfficeBig',
+	'CreateBarber',
+	'CreateGunstore',
+	'CreateStore2',
+	'CreateStore3',
+	'CreateWarehouse2',
+	'CreateWarehouse3',
+	'CreateK4Coke',
+	'CreateK4Meth',
+	'CreateK4Weed',
+	'CreateContainer2',
+	'CreateFurniStash1',
+	'CreateFurniStash3',
+	'CreateFurniLow',
+	'CreateFurniMotel',
+	'CreateFurniMotelClassic',
+	'CreateFurniMotelHigh',
+	'CreateFurniMotelModern2',
+	'CreateFurniMotelModern3',
+	'CreateCoke',
+	'CreateCoke2',
+	'CreateMeth',
+	'CreateWeed',
+	'CreateWeed2',
+	'CreateMansion',
+	'CreateMansion2',
+	'CreateMansion3',
+
+	'CreateDefault1',
+	'CreateDefault2',
+	'CreateDefault3',
+	'CreateDefault4',
+	'CreateDefault5',
+	'CreateDefault6',
+}
+
+dependencies {
+	'qb-core'
+}

@@ -887,6 +887,119 @@ local function CreateMansion3(spawn)
     return { objects, POIOffsets }
 end
 
+local function CreateDefault1(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 0, "y": 0, "z": 0, "h": 0}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`default_housing1_k4mb1`)
+	while not HasModelLoaded(`default_housing1_k4mb1`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`default_housing1_k4mb1`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
+local function CreateDefault2(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 0, "y": 0, "z": 0, "h": 0}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`default_housing1_k4mb2`)
+	while not HasModelLoaded(`default_housing1_k4mb2`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`default_housing1_k4mb2`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
+local function CreateDefault3(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 0, "y": 0, "z": 0, "h": 0}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`default_housing1_k4mb3`)
+	while not HasModelLoaded(`default_housing1_k4mb3`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`default_housing1_k4mb3`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
+local function CreateDefault4(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 0, "y": 0, "z": 0, "h": 0}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`default_housing1_k4mb4`)
+	while not HasModelLoaded(`default_housing1_k4mb4`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`default_housing1_k4mb4`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
+local function CreateDefault5(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 0, "y": 0, "z": 0, "h": 0}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`default_housing1_k4mb5`)
+	while not HasModelLoaded(`default_housing1_k4mb5`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`default_housing1_k4mb5`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
+
+local function CreateDefault6(spawn)
+	local objects = {}
+    local POIOffsets = {}
+	POIOffsets.exit = json.decode('{"x": 0, "y": 0, "z": 0, "h": 0}')
+	DoScreenFadeOut(500)
+    while not IsScreenFadedOut() do
+        Wait(10)
+    end
+	RequestModel(`default_housing1_k4mb6`)
+	while not HasModelLoaded(`default_housing1_k4mb6`) do
+	    Wait(1000)
+	end
+	local house = CreateObject(`default_housing1_k4mb6`, spawn.x, spawn.y, spawn.z, false, false, false)
+    FreezeEntityPosition(house, true)
+    objects[#objects+1] = house
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+    return { objects, POIOffsets }
+end
 -- Exports
 
 exports('CreateMedium2', CreateMedium2)
@@ -934,3 +1047,10 @@ exports('CreateWeed2', CreateWeed2)
 exports('CreateMansion', CreateMansion)
 exports('CreateMansion2', CreateMansion2)
 exports('CreateMansion3', CreateMansion3)
+
+exports('CreateDefault1', CreateDefault1)
+exports('CreateDefault2', CreateDefault2)
+exports('CreateDefault3', CreateDefault3)
+exports('CreateDefault4', CreateDefault4)
+exports('CreateDefault5', CreateDefault5)
+exports('CreateDefault6', CreateDefault6)
